@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+  color: brown;
+  overflow-x: hidden;
+  margin: 0;
+}
+.container{
+  background-color: white;
+  transform-origin: left top;
+  width: 100vw;
+  padding: 50px;
+  /* height: 1500 px auto; */
+  min-height: 100vh;
+  transition: transform 0.4s linear;
+}
+
+.container.show-nav{
+  transform: rotate(-20deg);
+  
+}
+
+.container.show-nav + nav {
+  transform: translateX(+110%);
+  transition: transform 0.4s ease;
+
+}
+
+.circle-container{
+ 
+  position: fixed;
+  top: -100px;
+  left:-100px;
+ 
+}
+.container.show-nav .circle{
+  transform: rotate(-70deg);
+
+}
+
+
+.circle{
+  background-color: red;
+  position: relative;
+  border-radius: 100px;
+  height:200px;
+  width: 200px;
+  transition: trasnform 0.4s linear;
+}
+.circle button{
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  left:50%;
+  padding-top: 40px;
+  padding-left: 10px;
+  font-size: 30px;
+  border: 0;
+  color: white;
+}
+
+.circle button:focus{
+  outline: none;
+}
+
+.circle button#close{
+  top: 35%;
+  left:40%;
+  transform-origin:top left;
+  transform:rotate(40deg);
+  cursor: pointer;
+  
+}
+
+.circle button#open{
+ 
+  cursor: pointer;
+  
+}
+
+.content img{
+  max-width: 100%;
+}
+.content{
+  max-width: 1000px;
+  margin: 50px auto;
+
+}
+.container{
+  max-width: 2000px;
+  /* margin: 50% auto; */
+
+}
+
+.container small{
+  color: black;
+  font-style: italic;
+}
+.container p{
+  line-height: 1.5;
+}
+h1{
+  margin: 0;
+}
+
+nav{
+  padding: 20px;
+  position: fixed;
+  bottom: 40px;
+  left:0;
+  z-index: 100;
+}
+
+nav ul{
+  list-style: none;
+  
+}
+
+nav ul li{
+  text-transform:uppercase;
+  color: white;
+  margin: 20px 0;
+  transform: translateX(-200%);
+  transition: transform 0.4s ease;
+}
+
+nav ul li i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+nav ul li + li {
+  margin-left: 15px;
+}
+
+nav ul li + li +li {
+  margin-left: 30px;
+}
